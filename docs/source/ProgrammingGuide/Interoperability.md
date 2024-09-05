@@ -1,4 +1,4 @@
-# 12. Interoperability and Legacy Codes
+# 13. Interoperability and Legacy Codes
 
 One goal of Kokkos is to support incremental adoption in legacy applications. This facilitates a step by step conversion allowing for continuous testing of functionality (and in certain bounds) of performance. One feature of this is full interoperability with the underlying backend programming models. This also allows for target specific optimizations written directly in the backend model in order to achieve maximal performance.
 
@@ -45,7 +45,7 @@ The [`RangePolicy`](../API/core/policies/RangePolicy) starts a 1D grid of 1D thr
 
 ### 12.1.2 OpenMP
 
-One restriction on OpenMP interoperability is that it is not valid to increase the number of threads via `omp_set_num_threads()` after initializing Kokkos. This restriction is for bookkeeping necessary when Kokkos does allocation for internal per thread data structures. It is however valid to ask for the thread ID inside a Kokkos parallel kernel compiled for the OpenMP execution space. It is also valid to use OpenMP constructs such as OpenMP atomics inside a parallel kernel or functions called by it. However, what happens when mixing OpenMP and Kokkos atomics is undefined since those will not necessarily map to the same underlying mechanism.
+One restriction on OpenMP interoperability is that it is not valid to increase the number of threads via `omp_set_num_threads()` after initializing Kokkos. This restriction is necessary for bookkeeping when Kokkos does allocation for internal per-thread data structures. It is however valid to ask for the thread ID inside a Kokkos parallel kernel compiled for the OpenMP execution space. It is also valid to use OpenMP constructs such as OpenMP atomics inside a parallel kernel or functions called by it. However, what happens when mixing OpenMP and Kokkos atomics is undefined since those will not necessarily map to the same underlying mechanism.
 
 
 ## 12.2 Legacy data structures

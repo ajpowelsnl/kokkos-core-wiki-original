@@ -2,7 +2,7 @@
 
 The programming model Kokkos is characterized by 6 core abstractions: Execution Spaces, Execution Patterns, Execution Policies, Memory Spaces, Memory Layout and Memory Traits. These abstraction concepts allow the formulation of generic algorithms and data structures which can then be mapped to different types of architectures. Effectively, they allow for compile time transformation of algorithms to allow for adaptions of varying degrees of hardware parallelism as well as of the memory hierarchy.
 
-![abstractions](https://raw.githubusercontent.com/wiki/kokkos/kokkos/ProgrammingGuide/figures/kokkos-abstractions-doc.png)
+![abstractions](figures/kokkos-abstractions-doc.png)
 
 <h4>Figure 3.1 The Core Abstractions of the Kokkos Programming Model</h4>
 
@@ -47,7 +47,7 @@ Memory Spaces are the places _Where_ data resides. They specify physical locatio
 
 ## 3.5 Memory Layout
 
-Layouts express the _mapping_ from logical (or algorithmical) indices to address offset for a data allocation. By adopting appropriate layouts for memory structures, an application can optimise data access patterns in a given algorithm. If an implementation provides polymorphic layouts (i.e. a data structure can be instantiated at compile or runtime with different layouts), an architecture dependent optimisation can be performed.
+Layouts express the _mapping_ from logical (or algorithmically) indices to address offset for a data allocation. By adopting appropriate layouts for memory structures, an application can optimise data access patterns in a given algorithm. If an implementation provides polymorphic layouts (i.e. a data structure can be instantiated at compile or runtime with different layouts), an architecture dependent optimisation can be performed.
 
 ## 3.6 Memory Traits
 

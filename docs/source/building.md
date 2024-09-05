@@ -47,7 +47,8 @@ There are numerous device backends, options, and architecture-specific optimizat
  -DCMAKE_INSTALL_PREFIX=${kokkos_install_folder} \
  -DKokkos_ENABLE_OPENMP=ON
 ````
-which activates the OpenMP backend. All the options controlling device backends, options, architectures, and third-party libraries (TPLs) are given below.
+which activates the OpenMP backend. All the options controlling device backends, options, architectures, and third-party libraries (TPLs) are given in [CMake Keywords](../keywords).
+
 
 ## Known Issues<a name="KnownIssues"></a>
 
@@ -105,9 +106,11 @@ The easiest way to configure the Spack environment is:
 > source spack/share/spack/setup-env.sh
 ````
 with other scripts available for other shells.
+
 You can display information about how to install packages with:
 ````bash
 > spack info kokkos
+````
 A basic installation would be done as:
 ````bash
 > spack install kokkos
